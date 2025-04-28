@@ -15,17 +15,13 @@ html {
     margin: 0 auto;
 }
 
-.container img {
-    width: 158px;
-    height: 50px;
-}
-
 header, footer {
     background-color: #fff;
     padding-top: 16px;
     color: #000;
 }
 
+    
 header {
     position: sticky;
     top: 0;
@@ -33,11 +29,21 @@ header {
     z-index: 1jjf;
 }
 
+header img {
+    margin-left: -24%;
+}
+
 header>.container,
 footer>.container {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 16px;
+    padding-top: 6px;
+}
+
+header img {
+    max-width: 170px;
+    margin-right: 24px;
 }
 
 nav {
@@ -77,9 +83,11 @@ nav li a {
     display: flex;
 }
 
+
 #sobre-a-loja img {
     max-width: 400px;
     margin-right: 24px;
+    border-radius: 5%;
 }
 
 section {
@@ -87,7 +95,8 @@ section {
 }
 
 section h2 {
-    margin-bottom: 16px;
+    margin-bottom: 26px;
+    font-size: 36px;
 }
 
 .lista-veiculos {
@@ -183,3 +192,109 @@ footer li {
 footer li img {
     height: 32px;
 }
+
+#bannerpromocional {
+    background-color: #efefef;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 24px;
+    padding-top: 0;
+    display: flex;
+    }
+
+    .news {
+        
+    }
+
+    @media screen and (max-width: 767px) {
+        .conteudo {
+            display: block;
+        }
+    
+        .container {
+            max-width: 90%;
+        }
+        
+        .destaque .noticia a {
+            display: block;
+            font-size: 1.5em;
+        }
+        
+        .destaque .noticia img {
+            margin-right: 0px;
+        }
+    
+        .noticias {
+            display: block;
+            grid-template-columns: repeat(3, 32.6%);
+            column-gap: 1%;
+            row-gap: 5%
+        }
+    
+        .noticias .noticia {
+            margin-bottom: 32px;
+        }
+    
+        aside {
+            padding-left: 0;
+        }
+    
+        header div.container {
+            flex-direction: column;
+        }
+    
+        .submenu {
+            display: block;
+            width: 100%;
+            position: relative;
+            border: none;
+        }
+        
+        .menu {
+            display: none;
+        }
+    
+        .menu > li {
+            clear: both;
+        }
+        
+        .submenu li {
+            display: block;
+            padding: 8px;
+        }
+        
+        .botao-menu {
+            display: flex;
+            justify-content: center;
+            margin-top: 16px;
+            padding-top: 16px;
+        }
+    
+        .botao-menu button {
+            padding: 8px;
+        }
+        }
+    
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        .container {
+            max-width: 90%;
+        }
+    
+        .botao-menu {
+            display: none;
+        }
+    
+        .destaque .noticia a {
+            font-size: 1.5em;
+        }
+    
+        .noticias {
+            grid-template-columns: repeat(2, 49%);
+        }
+    }
+    
+    @media screen  and (min-width: 1024px) {
+        .botao-menu {
+            display: none;
+        }
+    }
